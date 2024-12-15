@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --card-bg-color: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    --primary-color: #4da3ff;
+    --secondary-color: #a1a8ae;
+    --background-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --card-bg-color: #2c2c2c;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), #6610f2);
+    color: white;
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--card-bg-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item {
+    transition: background-color 0.3s ease;
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+}
+
+.list-group-item:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+#downloadResume {
+    transition: transform 0.3s ease;
+}
+
+#downloadResume:hover {
+    transform: scale(1.05);
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-light {
+    background-color: var(--background-color) !important;
+}
+
+.text-muted {
+    color: var(--secondary-color) !important;
+}
+
+#darkModeToggle {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#darkModeToggle:hover {
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
